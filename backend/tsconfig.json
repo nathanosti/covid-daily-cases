@@ -12,5 +12,11 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@controllers/*": ["/src/controllers/*"],
+      "@models/*": ["/src/models/*"],
+      "@types/*": ["/src/@types/*"]
+    }
   }
 }
