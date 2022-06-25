@@ -1,10 +1,8 @@
-import mongoose, { mongo, Schema } from "mongoose";
+import mongoose, { Schema } from "mongoose";
+
 import { covidCasesProps } from "src/@types/covidCasesTypes";
 
 const caseSchema = new Schema<covidCasesProps>({
-  _id: {
-    type: String,
-  },
   location: {
     type: String,
     required: true,
@@ -18,15 +16,15 @@ const caseSchema = new Schema<covidCasesProps>({
     required: true,
   },
   num_sequences: {
-    type: String,
+    type: Number,
     required: true,
   },
   perc_sequences: {
-    type: String,
+    type: Number,
     required: true,
   },
   num_sequences_total: {
-    type: String,
+    type: Number,
     required: true,
   },
   created_at: {
