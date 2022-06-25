@@ -3,8 +3,8 @@ export type covidCasesProps = {
   location: string;
   date: string;
   variant: string;
-  num_sequences: number;
-  perc_sequences: number;
-  num_sequences_total: number;
+  num_sequences: string;
+  perc_sequences: string;
+  num_sequences_total: string;
   created_at?: Date;
 };

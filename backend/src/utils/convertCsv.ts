@@ -31,9 +31,9 @@ export default async function converCsv({ buffer }: converCsvProps) {
       location: convertLineArr[0],
       date: convertLineArr[1],
       variant: convertLineArr[2],
-      num_sequences: Number(convertLineArr[3]),
-      perc_sequences: Number(convertLineArr[4]),
-      num_sequences_total: Number(convertLineArr[5]),
+      num_sequences: convertLineArr[3],
+      perc_sequences: convertLineArr[4],
+      num_sequences_total: convertLineArr[5],
     });
   }
 

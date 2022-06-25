@@ -1,11 +1,9 @@
 import mongoose, { mongo, Schema } from "mongoose";
-import { v4 as uuidv4 } from "uuid";
 import { covidCasesProps } from "src/@types/covidCasesTypes";
 
-const casesSchema = new Schema<covidCasesProps>({
+const caseSchema = new Schema<covidCasesProps>({
   _id: {
     type: String,
-    default: uuidv4(),
   },
   location: {
     type: String,
@@ -20,15 +18,15 @@ const casesSchema = new Schema<covidCasesProps>({
     required: true,
   },
   num_sequences: {
-    type: Number,
+    type: String,
     required: true,
   },
   perc_sequences: {
-    type: Number,
+    type: String,
     required: true,
   },
   num_sequences_total: {
-    type: Number,
+    type: String,
     required: true,
   },
   created_at: {
@@ -37,4 +35,4 @@ const casesSchema = new Schema<covidCasesProps>({
   },
 });
 
-export default mongoose.model("Cases", casesSchema);
+export default mongoose.model("Case", caseSchema);
