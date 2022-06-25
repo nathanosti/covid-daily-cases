@@ -5,16 +5,10 @@ import converCsv from "src/utils/convertCsv";
 
 const multerConfig = multer();
 
-const routes = Router();
+const casesRoutes = Router();
 
-routes.get("/", (request, response) => {
-  return response
-    .status(200)
-    .send("Fullstack Challenge 2021 🏅 - Covid Daily Cases");
-});
-
-routes.post(
-  "/cases/create",
+casesRoutes.post(
+  "/create",
   multerConfig.single("file"),
   async (request, response) => {
     const { buffer } = request.file;
@@ -28,4 +22,4 @@ routes.post(
   }
 );
 
-export default routes;
+export default casesRoutes;
