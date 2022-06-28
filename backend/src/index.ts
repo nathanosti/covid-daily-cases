@@ -2,8 +2,6 @@ import "dotenv/config";
 import express from "express";
 import routes from "src/routes/index";
 import { connectDatabase } from "src/database";
-import { dirname } from 'path'
-const __dirname = dirname('/src/routes')
 
 const app = express();
 
