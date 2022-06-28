@@ -1,5 +1,17 @@
-import app from "./app";
 import "dotenv/config";
+import express from "express";
+import routes from "src/routes/index";
+import { connectDatabase } from "src/database";
+import { dirname } from 'path'
+const __dirname = dirname('/src/routes')
+
+const app = express();
+
+connectDatabase();
+
+app.use(express.json());
+
+app.use(routes);
 
 const PORT = process.env.LOCAL_PORT;
 

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2019",
+    "target": "es2022",
     "moduleResolution": "node",
     "module": "commonjs",
     "lib": ["es2019"],
@@ -20,12 +20,10 @@
     "baseUrl": "./",
     "paths": {
       "@src/*": ["./src/*"],
-      "@test/*": ["./test/*"]
     },
     "rootDirs": ["./src", "./test"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["./src/**/*.ts", "./test/**/*.ts"],
   "exclude": ["./node_modules/*", "dist"]
 }
