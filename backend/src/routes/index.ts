@@ -1,12 +1,11 @@
-import casesRoutes from "./cases.routes";
 import { Router } from "express";
 
-const homeRoute = Router();
+const routes = Router();
 
-homeRoute.get("/", (request, response) => {
+routes.get("/", (request, response) => {
   return response
     .status(200)
     .send("Fullstack Challenge 2021 🏅 - Covid Daily Cases");
 });
 
-export { casesRoutes, homeRoute };
+export default routes;
